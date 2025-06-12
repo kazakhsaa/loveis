@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Цифровая шкатулка</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter&family=Caveat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-cream text-gray-800 font-body">
+  <!-- Переключатель темы -->
+  <button id="theme-toggle" aria-label="Переключить тему" class="theme-btn">🌙</button>
+
+  <!-- Приветственный экран -->
+  <section id="welcome" class="min-h-screen flex flex-col justify-center items-center text-center px-4">
+    <!-- Анимированные фоновые пятна -->
+    <span class="blob blob1"></span>
+    <span class="blob blob2"></span>
+    <span class="blob blob3"></span>
+    <h1 class="text-4xl md:text-5xl font-heading opacity-0 transition-opacity duration-2000 ease-in" id="welcome-text">
+      Есть вещи, важнее расстояний.<br>Иногда они живут просто в словах.
+    </h1>
+    <button id="open-btn" class="mt-8 px-6 py-2 bg-pastelPink text-white rounded shadow hover:bg-sand transition">Открыть</button>
+  </section>
+
+  <!-- Цифровая шкатулка -->
+  <section id="box" class="py-16 px-4 hidden">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+      <!-- Карточки -->
+      <div class="card bg-white shadow rounded p-6 cursor-pointer transition hover:bg-sand">
+        <h2 class="font-heading text-2xl">Тишина</h2>
+        <p class="mt-4 hidden">Ты бы удивилась, сколько в моей тишине о тебе.</p>
+      </div>
+      <div class="card bg-white shadow rounded p-6 cursor-pointer transition hover:bg-sand">
+        <h2 class="font-heading text-2xl">Случайность</h2>
+        <p class="mt-4 hidden">Весь шум вокруг исчез, когда ты появилась. И случайность вдруг стала судьбой.</p>
+      </div>
+      <div class="card bg-white shadow rounded p-6 cursor-pointer transition hover:bg-sand">
+        <h2 class="font-heading text-2xl">Простота</h2>
+        <p class="mt-4 hidden">Быть с тобой — это не про эффектность. Это про настоящее.</p>
+      </div>
+      <div class="card bg-white shadow rounded p-6 cursor-pointer transition hover:bg-sand">
+        <h2 class="font-heading text-2xl">Ты</h2>
+        <p class="mt-4 hidden">Во всех вещах, которые мне нравятся — есть что-то от тебя.</p>
+      </div>
+      <div class="card bg-white shadow rounded p-6 cursor-pointer transition hover:bg-sand">
+        <h2 class="font-heading text-2xl">Линия</h2>
+        <p class="mt-4 hidden">Каждый день с тобой — как тонкая линия между спокойствием и вдохновением.</p>
+      </div>
+      <div class="card bg-white shadow rounded p-6 cursor-pointer transition hover:bg-sand">
+        <h2 class="font-heading text-2xl">Где-то</h2>
+        <p class="mt-4 hidden">Где-то в мире ты сейчас живёшь свой день. А я просто рад быть частью этого «где-то».</p>
+      </div>
+      <div class="card bg-white shadow rounded p-6 cursor-pointer transition hover:bg-sand">
+        <h2 class="font-heading text-2xl">Если бы</h2>
+        <p class="mt-4 hidden">Если бы ты сейчас услышала мой внутренний голос — он бы просто сказал: «Ты — важна».</p>
+      </div>
+      <div class="card bg-white shadow rounded p-6 cursor-pointer transition hover:bg-sand">
+        <h2 class="font-heading text-2xl">Момент</h2>
+        <p class="mt-4 hidden">Ты читаешь это. Я думаю о тебе. Всё просто.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Слайдер с картинками -->
+  <section class="py-16 px-4">
+    <div id="slider-wrapper" class="relative max-w-3xl mx-auto overflow-hidden rounded shadow group">
+      <!-- Лента слайдов -->
+      <div class="flex transition-transform duration-500" id="slider">
+        <img src="IMG_3933.JPG" class="w-full flex-shrink-0 object-cover" alt="Фото 1">
+        <img src="IMG_3934.JPG" class="w-full flex-shrink-0 object-cover" alt="Фото 2">
+        <img src="IMG_3940.JPG" class="w-full flex-shrink-0 object-cover" alt="Фото 3">
+        <img src="IMG_3941.JPG" class="w-full flex-shrink-0 object-cover" alt="Фото 4">
+        <img src="IMG_3945.JPG" class="w-full flex-shrink-0 object-cover" alt="Фото 5">
+        <img src="IMG_3948.JPG" class="w-full flex-shrink-0 object-cover" alt="Фото 6">
+        <img src="IMG_3954.JPG" class="w-full flex-shrink-0 object-cover" alt="Фото 8">
+        <img src="IMG_3962.JPG" class="w-full flex-shrink-0 object-cover" alt="Фото 9">
+        <img src="IMG_3964.JPG" class="w-full flex-shrink-0 object-cover" alt="Фото 10">
+        <img src="IMG_3965.JPG" class="w-full flex-shrink-0 object-cover" alt="Фото 11">
+        <img src="IMG_3967.JPG" class="w-full flex-shrink-0 object-cover" alt="Фото 12">
+        <img src="IMG_3968.JPG" class="w-full flex-shrink-0 object-cover" alt="Фото 13">
+        <img src="IMG_3971.JPG" class="w-full flex-shrink-0 object-cover" alt="Фото 14">
+        <img src="IMG_3972.JPG" class="w-full flex-shrink-0 object-cover" alt="Фото 15">
+        <img src="IMG_3975.JPG" class="w-full flex-shrink-0 object-cover" alt="Фото 16">
+        <img src="IMG_3980.JPG" class="w-full flex-shrink-0 object-cover" alt="Фото 17">
+        <img src="IMG_3988.JPG" class="w-full flex-shrink-0 object-cover" alt="Фото 18">
+        <img src="IMG_3991.JPG" class="w-full flex-shrink-0 object-cover" alt="Фото 19">
+        <img src="IMG_3993.JPG" class="w-full flex-shrink-0 object-cover" alt="Фото 20">
+        <img src="IMG_3995.JPG" class="w-full flex-shrink-0 object-cover" alt="Фото 21">
+        <img src="IMG_3998.JPG" class="w-full flex-shrink-0 object-cover" alt="Фото 22">
+        <img src="IMG_4005.JPG" class="w-full flex-shrink-0 object-cover" alt="Фото 23">
+        <img src="IMG_4007.JPG" class="w-full flex-shrink-0 object-cover" alt="Фото 24">
+        <img src="IMG_4012.JPG" class="w-full flex-shrink-0 object-cover" alt="Фото 25">
+        <img src="IMG_4017.JPG" class="w-full flex-shrink-0 object-cover" alt="Фото 26">
+        <img src="IMG_4018.JPG" class="w-full flex-shrink-0 object-cover" alt="Фото 27">
+        <img src="IMG_4023.JPG" class="w-full flex-shrink-0 object-cover" alt="Фото 28">
+        <img src="IMG_4024.JPG" class="w-full flex-shrink-0 object-cover" alt="Фото 29">
+        <img src="IMG_4162.JPG" class="w-full flex-shrink-0 object-cover" alt="Фото 30">
+      </div>
+
+      <!-- Кнопки навигации -->
+      <button id="prev" aria-label="Предыдущий слайд" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow opacity-0 group-hover:opacity-100 transition">‹</button>
+      <button id="next" aria-label="Следующий слайд" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow opacity-0 group-hover:opacity-100 transition">›</button>
+
+      <!-- Точки -->
+      <div id="dots" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2"></div>
+    </div>
+  </section>
+
+  <!-- Финальный экран с таймером -->
+  <section id="count-section" class="py-16 text-center">
+    <p class="font-accent text-3xl">Ближе, чем кажется. Всегда рядом.</p>
+
+    <div id="countdown" class="flex justify-center items-center mt-8">
+      <div class="time-box">
+        <span id="cd-days" class="number">00</span>
+        <span class="label">дней</span>
+      </div>
+      <div class="colon">:</div>
+      <div class="time-box">
+        <span id="cd-hours" class="number">00</span>
+        <span class="label">часов</span>
+      </div>
+      <div class="colon">:</div>
+      <div class="time-box">
+        <span id="cd-minutes" class="number">00</span>
+        <span class="label">минут</span>
+      </div>
+      <div class="colon">:</div>
+      <div class="time-box">
+        <span id="cd-seconds" class="number">00</span>
+        <span class="label">секунд</span>
+      </div>
+    </div>
+  </section>
+
+  <script src="reveal.js"></script>
+</body>
+</html>
